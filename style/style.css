@@ -4,26 +4,8 @@
     box-sizing: border-box;
 }
 
-.grid-container{
-    display: grid;
-    grid-template-areas:
-      'area1 area1 area1 area1 area1 area2';
-}
-
-.grid-item1{
-  grid-area: area1;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.grid-item2{
-  grid-area: area2;
-}
-
 .card{
-  height: 380px;
+  height: 400px !important;
   width: 300px;
   border: 4px solid #077EB1;
   border-radius: 10px;
@@ -32,9 +14,8 @@
 
 img{
   width: 100%;
-  height: 50%;
+  height: 50% !important;
   border-radius: 6px 6px 0px 0px;
-  margin-bottom: 10px;
 }
 
 .card-content > p{
@@ -46,18 +27,23 @@ img{
 }
 
 .card-content{
-  margin: 10px;
+  margin: 10px 5px 10px 5px;
 }
 
 .slide-container{
-  max-width: 750px;
-  width: 100%;
-  margin-left: 0; 
+  margin-left: 10px !important;
+  width: 80% !important;
+}
+
+.col-md-8{
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  height: 570px;
 }
 
 .texto{
     position: relative;
-    height: 570px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -91,8 +77,78 @@ img{
     position: absolute;
     background-color: #CCE8F5;
     height: 570px;
-    width: 913px;
+    width: 910px;
     right: 0;
     z-index: -10;
 }
+
+.row{
+  width: 100%;
+}
   
+
+@media only screen and (max-width: 800px) {
+  .caixa{
+    margin-top: 300px !important;
+    width: 100%;
+  }
+
+  .texto{
+    margin-left: 10px;
+  }
+
+  .slide-container{
+    margin-left: 10px !important;
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .texto{
+    width: 300px;
+  }
+
+  .textinho > h2{
+    width: 300px;
+    font-size: 24px;
+}
+
+.textinho > p{
+    font-size: 16px;
+    width: 300px;
+}
+
+.textinho > h5{
+    color: #2D5278 !important;
+    font-size: 18px;
+    width: 250px; 
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-bottom: 15px;
+}
+
+.card-content > p{
+  font-size: 16px;
+  color: #2D5278;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 5px;
+  font-weight: 400;
+}
+
+.card{
+  height: fit-content !important;
+  width: 200px !important;
+  border: 4px solid #077EB1;
+  border-radius: 10px;
+  background-color: #ffff;
+}
+
+.col-md-8{
+  height: 400px;
+}
+
+.caixa{
+  margin-top: 200px !important;
+  height: 500px;
+}
+
+}
